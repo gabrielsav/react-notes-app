@@ -9,6 +9,16 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root{
+	--dark-color: hsl(0 0% 14%);
+	--white-color: hsl(0 0% 98%);
+	--notepurple: hsl(276, 66%, 39%);
+	--noteyellow: hsl(56, 98%, 77%);
+
+	
+}
+
+
 code {
   font-family: 'Poppins', source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -20,13 +30,18 @@ code {
   justify-content: space-between;
 }
 
+h1{
+	letter-spacing: -0.15rem;
+	font-weight: bolder ;
+}
+
 .dark-mode{
   background-color: black;
   transition: 0.5s;
 }
 
 .dark-mode h1{
-  color: white;
+  color: var(--white-color);
 }
 
 .container{
@@ -52,6 +67,8 @@ textarea{
   border: none;
   resize: none;
   background-color: #67d7cc;
+  font-family: 'Poppins', sans-serif;
+  font-size: small;
 }
 
 textarea:focus{
@@ -63,16 +80,20 @@ textarea:focus{
   border: none;
   border-radius: 15px;
   padding: 5px 10px 5px 10px;
+  font-family: Poppins;
+  font-size: 10px;
 }
 
 .save:hover{
-  background-color: #ededed;
+  background-color: var(--dark-color);
   cursor: pointer;
+  transition: 0.5s;
+  color: var(--white-color);
 
 }
 
 .note{
-  background-color: #fef68a;
+  background-color: var(--noteyellow) ;
   font-family: 'Poppins', sans-serif;
   font-size: small;
   margin-bottom: 10px;
@@ -83,6 +104,7 @@ textarea:focus{
   flex-direction: column;
   justify-content: space-between;
   white-space: pre-wrap;
+  overflow-wrap: break-word;
 
 }
 
@@ -95,7 +117,11 @@ textarea:focus{
 
 .delete-icon{
   cursor: pointer;
+}
 
+.delete-icon:hover{
+	color: red;
+	transition: 0.5s;
 }
 
 .search{
@@ -105,12 +131,12 @@ textarea:focus{
   border-radius: 10px;
   padding: 5px;
   margin-bottom: 1.5em;
-  margin-top: 1.5em; /* margin-top */
 }
 
 .search input{
   border: none;
   background-color: rgb(233,233,233);
+  font-family: Poppins;
 }
 
 .search input:focus{
